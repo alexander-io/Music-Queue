@@ -1,14 +1,8 @@
 let express = require('express')
 let app = express()
-let ap = require('http').createServer(app)
-// let io = require('socket.io')(ap)
-let fs = require('fs')
-
-
-// var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-
+let fs = require('fs')
 
 server.listen(8080)
 
@@ -99,17 +93,14 @@ app.get('/materialize.css', function(req, res) {
   res.sendFile(__dirname + '/node_modules/materialize-css/dist/css/materialize.css')
 })
 
-// app.get('/socket.io/socket.io.js', function(req, res) {
-//   res.sendFile(__dirname + '/node_modules/socket.io/lib/socket.js')
-// })
+app.get('/fonts/roboto/Roboto-Regular.woff', function(req, res) {
+  res.sendFile(__dirname + '/node_modules/materialize-css/dist/fonts/roboto/Roboto-Regular.woff')
+})
+
+app.get('/fonts/roboto/Roboto-Regular.woff2', function(req, res) {
+  res.sendFile(__dirname +  '/node_modules/materialize-css/dist/fonts/roboto/Roboto-Regular.woff2')
+})
 
 io.on('connection', function(socket) {
   socket.emit('music library', music_library)
-  // socket.on
 })
-
-
-// app.get()
-// app.listen(8080, function(){
-//   console.log('listening on 8080');
-// })
