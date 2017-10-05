@@ -1,5 +1,16 @@
 let express = require('express')
 let app = express()
+let ap = require('http').createServer(app)
+// let io = require('socket.io')(ap)
+let fs = require('fs')
+
+
+// var app = require('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+
+server.listen(8080)
 
 // global
 let music_library = {}
@@ -68,19 +79,37 @@ let search_music_library = function(search_query) {
 
 // TEST : add song to library
 add_song_to_library(make_song('biking', 'frank ocean', null, '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
-console.log(search_music_library(process.argv[2]))
-
-
+add_song_to_library(make_song('riding', 'frank ocean', null, '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
 
 
 app.get('/', function(req, res) {
-  // console.log('got request for root');
-  // send initial list of 'suggested music'
-  // res.send('helloworld')
-  res.json(music_library)
+  res.sendFile(__dirname + '/index.html')
+  console.log('got req');
 })
 
-// app.get()
-app.listen(8080, function(){
-  console.log('listening on 8080');
+app.get('/materialize.js', function(req, res) {
+  res.sendFile(__dirname + '/node_modules/materialize-css/dist/js/materialize.js')
 })
+
+app.get('/jquery.js', function(req, res) {
+  res.sendFile(__dirname + '/node_modules/jquery/dist/jquery.js')
+})
+
+app.get('/materialize.css', function(req, res) {
+  res.sendFile(__dirname + '/node_modules/materialize-css/dist/css/materialize.css')
+})
+
+// app.get('/socket.io/socket.io.js', function(req, res) {
+//   res.sendFile(__dirname + '/node_modules/socket.io/lib/socket.js')
+// })
+
+io.on('connection', function(socket) {
+  socket.emit('music library', music_library)
+  // socket.on
+})
+
+
+// app.get()
+// app.listen(8080, function(){
+//   console.log('listening on 8080');
+// })
