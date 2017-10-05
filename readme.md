@@ -3,8 +3,20 @@
 #### Server side directory structure :
 
 ```javascript
+
 // music directory structure
 // ./music/hip_hop/j_cole/4youreyesonly/song
+
+// list of genres 
+let lst_of_genres = [
+  'alt',
+  'classic',
+  'folk',
+  'hiphop',
+  'indie',
+  'lofi',
+  'pop'
+]
 
 // structure of a song object
 let song = {

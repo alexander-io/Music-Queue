@@ -44,6 +44,7 @@
       }
     }
   }
+
   let search_artist = function() {
     console.log('searching the library for matching artists');
   }
@@ -59,10 +60,11 @@
       // couldn't find a matching title comparing the external key...
       // ... se let's search inside each object to determine if we can find a match for the search query
       search_title(search_query)
-      
+
     }
   }
 
+  // TEST : add song to library
   add_song_to_library(make_song('biking', 'frank ocean', null, '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
   console.log(search_music_library(process.argv[2]))
 
