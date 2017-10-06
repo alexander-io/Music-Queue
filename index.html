@@ -63,8 +63,12 @@
         // add event listener to music_box_wrapper, onclick add the song to the user's music queue
         music_box_wrapper.addEventListener('click', function(){
           // console.log('attempting to add song :', music_library[x]);
-          console.log('add song :');
-          console.log(music_box_wrapper.data);
+          // console.log('add song :');
+          // console.log(music_box_wrapper.data);
+          client_music_queue.enqueue(music_box_wrapper.data)
+          console.log('current queue :');
+          console.log(client_music_queue);
+          music_box_wrapper.parentNode.removeChild(music_box_wrapper)
         })
 
         let music_box = document.createElement('div')
@@ -153,6 +157,7 @@
       }
       .music-box-wrapper:hover {
           background-color: #FFD700;
+          cursor: pointer;
       }
     </style>
   </body>
