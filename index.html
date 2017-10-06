@@ -30,7 +30,20 @@
     </div>
     <script type="text/javascript"src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
+    class Q {
+      constructor() {
+        this.supporting_array = []
+      }
+      enqueue(x) {
+        this.supporting_array.push(x)
+      }
+      dequeue() {
+        return this.supporting_array.shift()
+      }
+    }
 
+    let client_music_queue = new Q()
+    console.log(client_music_queue);
 
     let populate_music_library_section = function(music_library) {
 
@@ -43,7 +56,7 @@
         music_box_wrapper.style.padding = '1%'
         music_box_wrapper.style.display = 'block'
         music_box_wrapper.style.width = '100%'
-        music_box_wrapper.style.height = '100px'
+        music_box_wrapper.style.height = '120px'
         music_box_wrapper.style.border = '1px   solid #484848'
         music_box_wrapper.className += 'music-box-wrapper z-depth-5'
         music_box_wrapper.data = music_library[x]
@@ -104,7 +117,7 @@
         background-color: #212121;
         position: fixed;
         height: 100%;
-        width: 33%;
+        width: 33.3%;
         display: inline-block;
         float: left;
         overflow-y: auto;
@@ -113,8 +126,8 @@
         background-color: #484848;
         position: fixed;
         height:100%;
-        left:33%;
-        width: 33%;
+        left:33.3%;
+        width: 33.3%;
         display: inline-block;
         float: left;
         overflow-y: auto;
@@ -122,9 +135,9 @@
       #queue-display {
         background-color: #929292;
         position: fixed;
-        left:66%;
+        left:66.6%;
         height: 100%;
-        width: 33%;
+        width: 33.3%;
         display: inline-block;
         float: left;
         overflow-y: auto;

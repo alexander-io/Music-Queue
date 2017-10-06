@@ -7,7 +7,7 @@
 // music directory structure
 // ./music/hip_hop/j_cole/4youreyesonly/song
 
-// list of genres 
+// list of genres
 let lst_of_genres = [
   'alt',
   'classic',
