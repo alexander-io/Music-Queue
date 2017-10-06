@@ -50,12 +50,15 @@
         music_box_wrapper.style.display = 'block'
         music_box_wrapper.style.width = '100%'
         music_box_wrapper.style.height = '100px'
-        // music_box_wrapper.style.backgroundColor = '#fec901'
         music_box_wrapper.style.border = '1px   solid #484848'
-
         music_box_wrapper.className += 'music-box-wrapper z-depth-5'
-
-
+        music_box_wrapper.data = music_library[x]
+        // add event listener to music_box_wrapper, onclick add the song to the user's music queue
+        music_box_wrapper.addEventListener('click', function(){
+          // console.log('attempting to add song :', music_library[x]);
+          console.log('add song :');
+          console.log(music_box_wrapper.data);
+        })
 
         let music_box = document.createElement('div')
         music_box.style.textAlign = 'center'
@@ -97,7 +100,6 @@
       }
 
       populate_music_library_section(music_library)
-
 
       // emit an event that the server will hopefully hear, send the user-defined song queue data
       socket.emit('next event', {data : 'song_queue'})
