@@ -72,10 +72,10 @@ let search_music_library = function(search_query) {
 }
 
 // TEST : add song to library
-add_song_to_library(make_song('biking', 'frank ocean', null, '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
-add_song_to_library(make_song('riding', 'frank ocean', null, '2000', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
-add_song_to_library(make_song('idwdta', 'xxxtentacion', null, '120', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
-add_song_to_library(make_song('11pm', 'plvto', null, '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('biking', 'frank ocean', 'faux', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('riding', 'frank ocean', 'faux', '2000', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('idwdta', 'xxxtentacion', 'teh', '120', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('11pm', 'plvto', 'wha', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
 
 
 app.get('/', function(req, res) {
