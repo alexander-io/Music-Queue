@@ -23,6 +23,7 @@ class Q {
 
 let add_song_to_library = function(song) {
   music_library[song.title] = song
+  console.log('adding song to library');
 }
 
 let make_song = function(
@@ -91,7 +92,6 @@ add_song_to_library(make_song('klee7', 'xxxtentacion', 'teh', '120', 'music/hiph
 add_song_to_library(make_song('porcelain8', 'plvto', 'wha', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
 
 
-
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html')
   console.log('got req');
@@ -115,6 +115,10 @@ app.get('/fonts/roboto/Roboto-Regular.woff', function(req, res) {
 
 app.get('/fonts/roboto/Roboto-Regular.woff2', function(req, res) {
   res.sendFile(__dirname +  '/node_modules/materialize-css/dist/fonts/roboto/Roboto-Regular.woff2')
+})
+
+app.get('/app.js', function(req, res) {
+  res.sendFile(__dirname + '/public/app.js')
 })
 
 io.on('connection', function(socket) {
