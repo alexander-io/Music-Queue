@@ -20,6 +20,25 @@
     </div>
     <script type="text/javascript"src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
+
+
+    let populate_music_library_section = function(music_library) {
+
+      // define a music box to represent each song in the library
+
+      let music_box_wrapper = document.createElement('div')
+      music_box_wrapper.style.padding = '1%'
+      music_box_wrapper.style.display = 'block'
+      music_box_wrapper.style.width = '100%'
+      music_box_wrapper.style.height = '300px'
+        let music_box = document.createElement('div')
+
+
+        music_box_wrapper.appendChild(music_box);
+
+
+    }
+
     // define socket,  { ip : 'localhost', port : 8080}
     let socket = io('http://localhost:8080')
 
@@ -29,6 +48,9 @@
       for (x in music_library) {
         console.log(music_library[x]);
       }
+
+      populate_music_library_section(music_library)
+
 
       // emit an event that the server will hopefully hear, send the user-defined song queue data
       socket.emit('next event', {data : 'song_queue'})
@@ -42,6 +64,8 @@
         height: 100%;
         width: 33%;
         display: inline-block;
+        float: left;
+        overflow-y: auto;
       }
       #music-mount {
         background-color: #484848;
@@ -50,6 +74,8 @@
         left:33%;
         width: 33%;
         display: inline-block;
+        float: left;
+        overflow-y: auto;
       }
       #queue-display {
         background-color: #929292;
@@ -58,6 +84,8 @@
         height: 100%;
         width: 33%;
         display: inline-block;
+        float: left;
+        overflow-y: auto;
       }
       .section-header {
         text-align: center;
