@@ -76,6 +76,20 @@ add_song_to_library(make_song('biking', 'frank ocean', 'faux', '260', 'music/hip
 add_song_to_library(make_song('riding', 'frank ocean', 'faux', '2000', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
 add_song_to_library(make_song('idwdta', 'xxxtentacion', 'teh', '120', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
 add_song_to_library(make_song('11pm', 'plvto', 'wha', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('loving', 'frank ocean', 'faux', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('pottery', 'frank ocean', 'faux', '2000', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('klee', 'xxxtentacion', 'teh', '120', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('porcelain', 'plvto', 'wha', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+
+add_song_to_library(make_song('biking1', 'frank ocean', 'faux', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('riding2', 'frank ocean', 'faux', '2000', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('idwdta3', 'xxxtentacion', 'teh', '120', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('11pm4', 'plvto', 'wha', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('loving5', 'frank ocean', 'faux', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('pottery6', 'frank ocean', 'faux', '2000', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('klee7', 'xxxtentacion', 'teh', '120', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+add_song_to_library(make_song('porcelain8', 'plvto', 'wha', '260', 'music/hiphop/frank_ocean/biking/biking.mp3', 'music/hiphop/frank_ocean/biking/biking.png'))
+
 
 
 app.get('/', function(req, res) {

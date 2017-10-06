@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   </head>
   <body>
-    <div id="nav" style="width:100%; background-color: #fec901; height:10px;" >
+    <div id="nav-accent" style="width:100%; background-color: #fec901; height:10px;" >
     </div>
     <div id="nav" style="width:100%; background-color: #212121; height:100px;" >
       <div class="" style="width:32.5%; display:inline-block;">
@@ -29,6 +29,25 @@
     </div>
     <div id="queue-display"class="">
     </div>
+    <div id="footer-control"
+    class=""
+    style="height:100px;width:10%;background-color:#212121;position:fixed;width:100%;bottom:0px;"
+    >
+    <div class="container">
+      <div class="row">
+        <div class="col s4">
+          <button type="button" name="button"></button>
+          </div>
+        </div>
+        <div class="col s4">
+
+        </div>
+        <div class="col s4">
+
+        </div>
+      </div>
+    </div>
+  </div>
     <script type="text/javascript"src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
     let music_mount = document.getElementById('music-mount');
@@ -124,7 +143,7 @@
       #control {
         background-color: #212121;
         position: fixed;
-        height: 100%;
+        height: 80%;
         width: 33.3%;
         display: inline-block;
         float: left;
@@ -134,7 +153,7 @@
       #music-mount {
         background-color: #484848;
         position: fixed;
-        height:100%;
+        height:80%;
         left:33.3%;
         width: 33.3%;
         display: inline-block;
@@ -146,7 +165,7 @@
         background-color: #929292;
         position: fixed;
         left:66.6%;
-        height: 100%;
+        height: 80%;
         width: 33.3%;
         display: inline-block;
         float: left;
