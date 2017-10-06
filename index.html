@@ -25,18 +25,49 @@
     let populate_music_library_section = function(music_library) {
 
       // define a music box to represent each song in the library
+      let music_mount = document.getElementById('music-mount');
+      music_mount.style.padding = '0% 5% 5% 5%'
 
-      let music_box_wrapper = document.createElement('div')
-      music_box_wrapper.style.padding = '1%'
-      music_box_wrapper.style.display = 'block'
-      music_box_wrapper.style.width = '100%'
-      music_box_wrapper.style.height = '300px'
+      for (x in music_library) {
+        let music_box_wrapper = document.createElement('div')
+        music_box_wrapper.style.padding = '1%'
+        music_box_wrapper.style.display = 'block'
+        music_box_wrapper.style.width = '100%'
+        music_box_wrapper.style.height = '100px'
+        // music_box_wrapper.style.backgroundColor = '#fec901'
+        music_box_wrapper.style.border = '1px   solid #484848'
+
+        music_box_wrapper.className += 'music-box-wrapper z-depth-5'
+
+
+
         let music_box = document.createElement('div')
+        music_box.style.textAlign = 'center'
+        music_box.style.color = 'white'
+        // let song_title, song_artist, song_album, song_duration = document.createElement('h4')
+        let
+        song_title = document.createElement('h6')
+        , song_artist = document.createElement('h6')
+        , song_album = document.createElement('h6')
+        , song_duration = document.createElement('h6')
 
+        // song_title.innerHTML = music_library[x]
+        song_title.innerHTML = music_library[x].title
+        song_artist.innerHTML = music_library[x].artist
+        song_album.innerHTML = music_library[x].album
+        song_duration.innerHTML = music_library[x].duration
+
+        music_box.appendChild(song_title)
+        music_box.appendChild(song_artist)
+        music_box.appendChild(song_album)
+        music_box.appendChild(song_duration)
+        // let song_artist = document.createElement('h4');
 
         music_box_wrapper.appendChild(music_box);
 
+        music_mount.appendChild(music_box_wrapper)
 
+      }
     }
 
     // define socket,  { ip : 'localhost', port : 8080}
@@ -89,9 +120,15 @@
       }
       .section-header {
         text-align: center;
-        color: white;
+        color: #fec901;
         font-family: 'Nosifer', cursive;
         font-size: 100%;
+      }
+      .music-box-wrapper {
+        background-color: #fec901;
+      }
+      .music-box-wrapper:hover {
+          background-color: #FFD700;
       }
     </style>
   </body>
