@@ -24,12 +24,12 @@
     music_box_wrapper.style.width = '100%'
     music_box_wrapper.style.height = '120px'
     music_box_wrapper.style.border = '1px   solid #484848'
-    music_box_wrapper.className += 'music-box-wrapper z-depth-5'
+    music_box_wrapper.className += 'music-box-wrapper z-depth-5 waves-effect'
     music_box_wrapper.data = music_library[x]
 
     let music_box = document.createElement('div')
     music_box.style.textAlign = 'center'
-    music_box.style.color = 'white'
+    music_box.style.color = 'black'
     // let song_title, song_artist, song_album, song_duration = document.createElement('h4')
     let
     song_title = document.createElement('h6')

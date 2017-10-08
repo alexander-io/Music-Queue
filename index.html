@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+English+SC" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   </head>
-  <body>
+  <body style="">
     <div id="nav-accent" style="width:100%; background-color: #fec901; height:10px;" >
     </div>
     <div id="nav" style="width:100%; background-color: #212121; height:10%;" >
@@ -31,16 +31,18 @@
     </div>
     <div id="footer-control"
     class=""
-    style="height:15%;width:100%;background-color:#212121;position:fixed;bottom:0px;"
+    style="height:15%;width:100%;background: linear-gradient(to right, #212121 0%,#212121 50%,#000000 50%,#929292 50%,#929292 100%); /* W3C */
+;position:fixed;bottom:0px;"
     >
     <div class="container" style="height:100%;">
+
       <div class="row" style="height:100%;">
         <div id="left-control-button-wrapper"class="col s4 footer-control"
           style="background-color:#212121;
             height:100%;">
             <div
               id="left-control-button"
-              class="control-button"
+              class="control-button waves-effect"
               style="
                 height:50px;
                 width:50px;
@@ -57,7 +59,7 @@
         >
           <div
             id="middle-control-button"
-            class="control-button"
+            class="control-button waves-effect"
             style="
               height:50px;
               width:50px;
@@ -76,7 +78,7 @@
         >
           <div
             id="right-control-button"
-            class="control-button"
+            class="control-button waves-effect"
             style="
               height:50px;
               width:50px;
@@ -273,22 +275,26 @@
         font-size: 180%;
       }
       .music-box-wrapper {
-        background-color: #fec901;
+        background-color: #ffca01;
       }
       .music-box-wrapper:hover {
-          background-color: #FFD700;
+          background-color: #fffd50;
           cursor: pointer;
       }
+
       .footer-control {
         background-color: white;
-        height:100%:
+        height:100%;
       }
       body {
         font-family: 'Poiret One', cursive;
       }
-
+      h6 {
+        font-weight: 600;
+      }
       .control-button {
       background-color: #ffc901;  /*background-color: #ff6600;*/
+
       }
       .control-button:hover {
         cursor: pointer;
