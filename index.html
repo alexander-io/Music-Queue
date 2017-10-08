@@ -37,16 +37,14 @@
       <div class="row" style="height:100%;">
         <div id="left-control-button-wrapper"class="col s4 footer-control"
           style="background-color:#212121;
-            height:100%;
-            border: 10px solid #ffc901;">
+            height:100%;">
             <div
               id="left-control-button"
-              class=""
+              class="control-button"
               style="
                 height:50px;
                 width:50px;
                 display: black;
-                background-color: #ffc901;
               "
             >
 
@@ -55,17 +53,16 @@
         <div id="middle-control-button-wrapper"class="col s4 footer-control"
           style="background-color:#484848;
             height:100%;
-            border: 10px solid #ffc901;
             "
         >
           <div
             id="middle-control-button"
-            class=""
+            class="control-button"
             style="
               height:50px;
               width:50px;
               display: black;
-              background-color: #ffc901;
+
             "
           >
 
@@ -75,17 +72,15 @@
         <div id="right-control-button-wrapper"class="col s4 footer-control"
           style="background-color:#929292;
             height:100%;
-            border: 10px solid #ffc901;
             "
         >
           <div
             id="right-control-button"
-            class=""
+            class="control-button"
             style="
               height:50px;
               width:50px;
               display: black;
-              background-color: #ffc901;
             "
           >
 
@@ -108,15 +103,34 @@
       let
         left_control_button = document.getElementById('left-control-button'),
         middle_control_button = document.getElementById('middle-control-button'),
-        right_control_button = document.getElementById('left-control-button')
+        right_control_button = document.getElementById('right-control-button')
 
 
       // derive rectangle objects from wrappers and controllers
       let
         left_control_button_rect = left_control_button.getBoundingClientRect(),
         middle_control_button_rect = middle_control_button.getBoundingClientRect(),
-        
+        right_control_button_rect = right_control_button.getBoundingClientRect()
 
+      let
+        left_control_wrapper_rect = left_control_wrapper.getBoundingClientRect(),
+        middle_control_wrapper_rect = middle_control_wrapper.getBoundingClientRect(),
+        right_control_wrapper_rect = right_control_wrapper.getBoundingClientRect()
+
+      left_control_button.style.position = 'relative'
+      left_control_button.style.left = (left_control_wrapper_rect.width/2) - (left_control_button_rect.width) + 'px'
+      left_control_button.style.top = (left_control_wrapper_rect.height/2) - (left_control_button_rect.height) + 'px'
+
+      middle_control_button.style.position = 'relative'
+      middle_control_button.style.left = (middle_control_wrapper_rect.width/2) - (middle_control_button_rect.width) + 'px'
+      middle_control_button.style.top = (middle_control_wrapper_rect.height/2) - (middle_control_button_rect.height) + 'px'
+
+
+      right_control_button.style.position = 'relative'
+      right_control_button.style.left = (right_control_wrapper_rect.width/2) - (right_control_button_rect.width) + 'px'
+      right_control_button.style.top = (right_control_wrapper_rect.height/2) - (right_control_button_rect.height) + 'px'
+
+      // left_control_button.style.left = '20px'
 
     </script>
 
@@ -271,6 +285,14 @@
       }
       body {
         font-family: 'Poiret One', cursive;
+      }
+
+      .control-button {
+      background-color: #ffc901;  /*background-color: #ff6600;*/
+      }
+      .control-button:hover {
+        cursor: pointer;
+        background-color: white;
       }
     </style>
   </body>
