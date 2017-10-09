@@ -1,5 +1,8 @@
 ### Music Queue Server
 
+![screencap](cap.png)
+
+
 #### Server side directory structure :
 
 ```javascript
